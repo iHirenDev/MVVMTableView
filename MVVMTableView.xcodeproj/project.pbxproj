@@ -12,6 +12,10 @@
 		90F9EEF821467E9E00F9B129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F9EEF621467E9E00F9B129 /* Main.storyboard */; };
 		90F9EEFA21467EAC00F9B129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F9EEF921467EAC00F9B129 /* Assets.xcassets */; };
 		90F9EEFD21467EAC00F9B129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F9EEFB21467EAC00F9B129 /* LaunchScreen.storyboard */; };
+		90F9EF0521467F5D00F9B129 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9EF0421467F5D00F9B129 /* APIClient.swift */; };
+		90F9EF0721467FBC00F9B129 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9EF0621467FBC00F9B129 /* MovieViewModel.swift */; };
+		90F9EF0921467FDB00F9B129 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9EF0821467FDB00F9B129 /* MovieModel.swift */; };
+		90F9EF0B2146800C00F9B129 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9EF0A2146800C00F9B129 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		90F9EEF921467EAC00F9B129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90F9EEFC21467EAC00F9B129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90F9EEFE21467EAC00F9B129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F9EF0421467F5D00F9B129 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		90F9EF0621467FBC00F9B129 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		90F9EF0821467FDB00F9B129 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		90F9EF0A2146800C00F9B129 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		90F9EEF121467E9900F9B129 /* MVVMTableView */ = {
 			isa = PBXGroup;
 			children = (
+				90F9EF0E2146804800F9B129 /* Model */,
+				90F9EF0D2146803A00F9B129 /* ViewModel */,
+				90F9EF0C2146802E00F9B129 /* View */,
 				90F9EEF221467E9C00F9B129 /* AppDelegate.swift */,
-				90F9EEF421467E9D00F9B129 /* ViewController.swift */,
+				90F9EF0421467F5D00F9B129 /* APIClient.swift */,
 				90F9EEF621467E9E00F9B129 /* Main.storyboard */,
 				90F9EEF921467EAC00F9B129 /* Assets.xcassets */,
 				90F9EEFB21467EAC00F9B129 /* LaunchScreen.storyboard */,
 				90F9EEFE21467EAC00F9B129 /* Info.plist */,
 			);
 			path = MVVMTableView;
+			sourceTree = "<group>";
+		};
+		90F9EF0C2146802E00F9B129 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				90F9EEF421467E9D00F9B129 /* ViewController.swift */,
+				90F9EF0A2146800C00F9B129 /* MovieCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		90F9EF0D2146803A00F9B129 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				90F9EF0621467FBC00F9B129 /* MovieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		90F9EF0E2146804800F9B129 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90F9EF0821467FDB00F9B129 /* MovieModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +173,10 @@
 			files = (
 				90F9EEF521467E9D00F9B129 /* ViewController.swift in Sources */,
 				90F9EEF321467E9C00F9B129 /* AppDelegate.swift in Sources */,
+				90F9EF0B2146800C00F9B129 /* MovieCell.swift in Sources */,
+				90F9EF0921467FDB00F9B129 /* MovieModel.swift in Sources */,
+				90F9EF0521467F5D00F9B129 /* APIClient.swift in Sources */,
+				90F9EF0721467FBC00F9B129 /* MovieViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

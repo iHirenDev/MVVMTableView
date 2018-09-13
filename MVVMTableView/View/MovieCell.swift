@@ -14,6 +14,7 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var director:UILabel!
     @IBOutlet weak var date:UILabel!
     @IBOutlet weak var movieImage:UIImageView!
+
     
     func movieData(movie:MovieModel){
         self.name.text = movie.name
@@ -22,7 +23,7 @@ class MovieCell: UITableViewCell {
         
         self.movieImage.layer.borderWidth = 1
         self.movieImage.layer.masksToBounds = false
-        //self.movieImage.layer.borderColor = UIColor.blackColor().CGColor
+        self.movieImage.layer.borderColor = UIColor.black.cgColor
         self.movieImage.layer.cornerRadius = self.movieImage.frame.height/2
         self.movieImage.clipsToBounds = true
         

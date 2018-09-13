@@ -21,10 +21,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tblView.delegate = self
         tblView.rowHeight = UITableViewAutomaticDimension
         tblView.estimatedRowHeight = 100
+        tblView.isHidden = true
+        let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        
+        // Position Activity Indicator in the center of the main view
+        myActivityIndicator.center = view.center
+        
+        // If needed, you can prevent Acivity Indicator from hiding when stopAnimating() is called
+        myActivityIndicator.hidesWhenStopped = true
+        
+        // Start Activity Indicator
+        myActivityIndicator.startAnimating()
+        
+        // Call stopAnimating() when need to stop activity indicator
+        
+        
+        
+        view.addSubview(myActivityIndicator)
+        view.bringSubview(toFront: myActivityIndicator)
+        
         
         viewModel.fetchMovies { (success) -> Void in
             if(success){
                 DispatchQueue.main.async {
+                    myActivityIndicator.stopAnimating()
+                    self.tblView.isHidden = false
                     self.tblView.reloadData()
                 }
             }
@@ -61,6 +82,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

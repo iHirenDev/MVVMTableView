@@ -39,5 +39,7 @@ class MovieViewModel:NSObject {
     func numberOfRows() -> Int {
         return movie.count
     }
+    
+    
 }
 
